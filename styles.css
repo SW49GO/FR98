@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(49, 49, 49);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.entete {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  height: 100px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container {
+  position: relative;
+  top: 105px;
+}
+.signature {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: white;
+  font-size: 10px;
+  width: 35px;
+  height: 20px;
+}
+.img_signature {
+  height: 100%;
+  object-fit: contain;
+  margin-left: 22px;
+}
+.navbar {
+  background-color: #000;
+}
+.navbar > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  line-height: 36px;
+}
+.navbar > ul > li {
+  text-align: center;
+}
+.menu_sous {
+  position: relative;
+}
+.ss_menu {
+  display: none;
+  position: absolute;
+  top: 28px;
+  padding: 10px;
+}
+.menu_sous:hover .ss_menu {
+  display: block;
+}
+.myButton {
+  box-shadow: inset -1px 7px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  text-decoration: none;
+  text-shadow: 0px 5px 0px #2b665e;
+  height: 35px;
+  width: 120px;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .header {
+    height: 59px;
+  }
+  .container {
+    top: 105px;
+  }
+  .signature {
+    width: 40px;
+    height: 40px;
+  }
+  .img_signature {
+    margin-left: 0px;
+  }
+  label {
+    display: block;
+    font-size: 17px;
+    margin: 5px;
+    color: white;
+  }
+  .navbar > ul {
+    justify-content: space-around;
+  }
+  .controle {
+    text-align: center;
+  }
+  .connexion {
+    display: flex;
+    text-align: center;
+  }
+  .formConnexion {
+    height: 300px;
+    width: 275px;
+    padding: 30px;
+    background-image: url('../pictures/bouclier.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .connexion input {
+    height: 23px;
+    width: 150px;
+    margin: 7px;
+  }
+  .connexion_error {
+    position: relative;
+    font-size: 15px;
+    color: white;
+    margin: 5px auto;
+  }
+  .img_connect {
+    margin-left: 10%;
+  }
+  input[name='connexion'] {
+    width: 100px;
+  }
+  input[name='connexion']:focus {
+    opacity: 0.6;
+  }
+}
+@media only screen and (min-width: 1024px) {
+}

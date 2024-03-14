@@ -1,0 +1,1163 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(49, 49, 49);
+}
+a {
+  text-decoration: none;
+}
+.entete {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+}
+.header {
+  text-align: center;
+  height: 110px;
+  background-color: rgb(6, 7, 8);
+}
+.main_container {
+  position: relative;
+  top: 157px;
+  text-align: center;
+  padding: 20px;
+  background: rgb(49, 49, 49);
+}
+.presentation {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 9;
+  top: 155px;
+  width: 97.7%;
+  background-color: rgb(49, 49, 49);
+  padding: 12px;
+  border-bottom: 10px solid rgb(135, 173, 190);
+}
+.presentation p {
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
+}
+.presentation a:visited {
+  color: rgb(222, 215, 0);
+}
+.playersList {
+  position: relative;
+  top: 48px;
+}
+.players {
+  display: flex;
+  background-color: rgb(86, 109, 173);
+  width: 100%;
+  height: 100px;
+  border: solid 5px rgb(135, 173, 190);
+}
+.joueur,
+.crane,
+.base,
+.perkListB,
+.perkListT,
+.perkListG,
+.tresor,
+.guerre {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  font-size: 30px;
+  width: 18%;
+  padding: 5px;
+}
+.base,
+.perkListB,
+.perkListT,
+.perkListG,
+.tresor,
+.guerre {
+  width: 35%;
+}
+.dons {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.donsB,
+.donsT,
+.donsG {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.plus,
+.moins,
+.plusB,
+.moinsB,
+.plusT,
+.moinsT,
+.plusG,
+.moinsG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 22px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid rgb(247, 184, 59);
+  background-color: rgb(247, 184, 59);
+}
+.plusB,
+.moinsB {
+  border: 2px solid blue;
+  background-color: blue;
+}
+.plusT,
+.moinsT {
+  border: 2px solid green;
+  background-color: green;
+}
+.plusG,
+.moinsG {
+  border: 2px solid red;
+  background-color: red;
+}
+.plus,
+.plusB,
+.plusT,
+.plusG {
+  border-radius: 0 5px 5px 0;
+}
+.moins,
+.moinsB,
+.moinsT,
+.moinsG {
+  border-radius: 5px 0 0 5px;
+}
+.nbDons,
+.nbDonsB,
+.nbDonsT,
+.nbDonsG {
+  width: 50px;
+  font-size: 20px;
+  padding: 2px;
+  color: white;
+  border: 2px solid rgb(247, 184, 59);
+  border-radius: 5px;
+}
+.nbDonsB {
+  border: 2px solid blue;
+}
+.nbDonsT {
+  border: 2px solid green;
+}
+.nbDonsG {
+  border: 2px solid red;
+}
+.joueur {
+  font-size: 25px;
+}
+.joueur:hover {
+  background-color: rgb(49, 49, 49);
+}
+.base {
+  border: solid blue;
+  background-color: rgb(78, 78, 233);
+}
+
+.tresor {
+  border: solid green;
+  background-color: rgb(76, 126, 76);
+}
+
+.guerre {
+  border: solid red;
+  background-color: rgb(247, 106, 106);
+}
+.crane {
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+}
+.img {
+  height: 70px;
+}
+.perkListB,
+.perkListG,
+.perkListT {
+  font-size: 14px;
+  color: white;
+  padding: 20px;
+}
+.bulle {
+  width: 15px;
+}
+.img_base,
+.img_tresor,
+.img_guerre {
+  position: relative;
+  margin: 10px;
+}
+.perkHaut,
+.perkDroite,
+.perkGauche {
+  position: absolute;
+}
+.perkHaut {
+  top: -7px;
+  right: 27px;
+}
+.perkGauche {
+  bottom: 3px;
+  right: 62px;
+}
+.perkDroite {
+  bottom: 3px;
+  right: -7px;
+}
+.controle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(49, 49, 49);
+  background-image: url(../pictures/bouclieFr.png);
+}
+.controle p {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+label {
+  display: block;
+  font-size: 25px;
+  margin: 10px;
+  color: white;
+}
+.connexion {
+  display: flex;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 210px;
+}
+.connexion input {
+  height: 40px;
+  width: 200px;
+  margin: 20px;
+}
+.connexion_error {
+  position: relative;
+  top: 50px;
+  font-size: 30px;
+  color: white;
+  margin: 20px auto;
+}
+.admin_player {
+  position: relative;
+  top: 90px;
+}
+.addPlayer,
+.select_player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 5px solid rgb(222, 215, 0);
+  margin-bottom: 20px;
+}
+.select_grade option {
+  background-color: black;
+}
+.select_player_list {
+  width: 200px;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 220px;
+  width: 90%;
+  margin: 0 auto;
+  border: 5px solid rgb(222, 215, 0);
+}
+.infos_player,
+.newInsignes {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.infos_player label {
+  font-size: 20px;
+}
+.newInsignes {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.newInsignes h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.newBase {
+  border: 5px solid blue;
+  border-radius: 10px;
+  background-color: rgb(116, 115, 187);
+  margin: 10px;
+}
+.newTresor {
+  border: 5px solid green;
+  border-radius: 10px;
+  background-color: rgb(125, 187, 128);
+  margin: 10px;
+}
+.newGuerre {
+  border: 5px solid red;
+  border-radius: 10px;
+  background-color: rgb(199, 129, 129);
+  margin: 10px;
+}
+.newVitesse {
+  border: 5px solid grey;
+  border-radius: 10px;
+  background-color: rgb(197, 188, 188);
+  margin: 10px;
+}
+.newPerle {
+  border: 5px solid purple;
+  border-radius: 10px;
+  background-color: rgb(131, 80, 131);
+  margin: 10px;
+}
+.newInsta {
+  width: 285px;
+  border: 5px solid orange;
+  border-radius: 10px;
+  background-color: rgb(223, 199, 156);
+  margin: 10px;
+}
+.newFonte {
+  width: 285px;
+  border: 5px solid brown;
+  border-radius: 10px;
+  background-color: rgb(158, 105, 105);
+  margin: 10px;
+}
+.acquis,
+.perkHaut,
+.perkDroite,
+.perkGauche {
+  display: flex;
+  flex-direction: row;
+}
+.acquis {
+  margin-bottom: 25px;
+}
+.perks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.perksHaut,
+.perksDroite,
+.perksGauche {
+  height: 25px;
+}
+/*
+.validModif,
+.annulerModif,
+#modif_player,
+#add_new_player,
+.annulerModif,
+.suppr_player,
+.validProfil,
+.sub_add_bannis {
+  margin: 0 auto;
+  font-weight: bold;
+  width: 200px;
+  height: 55px;
+  border: none;
+  background-color: rgb(135, 173, 190);
+  background-image: url('../pictures/btnVert.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.validModif:focus,
+.annulerModif:focus,
+#modif_player:focus,
+#add_new_player:focus,
+.annulerModif:focus,
+.suppr_player:focus,
+.validProfil:focus,
+.sub_add_bannis:focus {
+  opacity: 0.6;
+}
+*/
+.validProfil {
+  margin: 20px;
+}
+.suppr_player {
+  background-image: url('../pictures/btnRed.png');
+}
+.suppr_player:focus {
+  opacity: 0.6;
+}
+#modif_player,
+#add_new_player {
+  margin-right: 20px;
+}
+#modif_player:focus,
+#add_new_player:focus {
+  opacity: 0.6;
+}
+.select_player_list,
+#newPlayer,
+#select_grade,
+#playerNewGrade {
+  width: 210px;
+  height: 50px;
+}
+.select_player label {
+  margin-left: 220px;
+}
+.select_player option {
+  color: white;
+}
+.addPlayer label {
+  margin-left: 25px;
+}
+#cranePlayer {
+  width: 70px;
+  height: 50px;
+}
+span {
+  font-size: 20px;
+}
+.btn_modif {
+  display: flex;
+}
+input,
+select {
+  border-radius: 5px;
+}
+select {
+  font-size: 17px;
+}
+select option {
+  background-color: rgb(89, 111, 161);
+  font-size: 20px;
+}
+.footer {
+  height: 100px;
+  background: rgb(49, 49, 49);
+  color: white;
+}
+.pageBannis {
+  top: 45px;
+}
+h1,
+h2,
+h3 {
+  color: rgb(222, 215, 0);
+  text-align: center;
+  margin: 30px;
+}
+table {
+  width: 60%;
+  border-collapse: collapse;
+  border: 2px solid brown;
+  text-align: center;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px auto;
+}
+tr,
+td,
+th {
+  padding: 5px;
+  border: 2px solid brown;
+}
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: rgb(243, 81, 81);
+}
+.signature {
+  position: absolute;
+  right: -13px;
+  top: -16px;
+  color: white;
+  margin: 20px;
+}
+.bienvenue {
+  position: relative;
+  top: -25px;
+  text-align: center;
+  font-size: 30px;
+}
+.disconnect {
+  position: relative;
+  left: 15px;
+  top: 3px;
+  width: 30px;
+}
+.formSuppr {
+  margin: 0 auto;
+}
+.form_bannis {
+  display: flex;
+  height: 95px;
+  align-items: center;
+}
+.add_bannis {
+  height: 30px;
+}
+.sub_add_bannis {
+  margin-bottom: 0px;
+}
+.p_suppr {
+  font-size: 20px;
+  margin: 20px;
+}
+.reasonSuppr {
+  font-size: 20px;
+  width: 400px;
+  height: 150px;
+}
+.th_title1 {
+  background-color: rgb(59, 53, 53);
+  color: white;
+  width: 20%;
+}
+.th_title2 {
+  background-color: rgb(59, 53, 53);
+  color: white;
+  width: 40%;
+}
+.th_title3,
+.th_title4 {
+  background-color: rgb(59, 53, 53);
+  color: white;
+  width: 10%;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+}
+.tab_suppr tr:nth-child(odd),
+.tab_bannis tr:nth-child(odd),
+.tabConq tr:nth-child(odd),
+.tab_conq tr:nth-child(even),
+.tab_part tr:nth-child(odd),
+.tab_dons tr:nth-child(odd) {
+  background-color: rgb(199, 191, 191);
+}
+.tab_part {
+  width: 80%;
+}
+.tab_bannis th {
+  height: 50px;
+  background-color: rgb(68, 65, 65);
+  color: white;
+}
+.refresh {
+  width: 50px;
+  height: 50px;
+}
+.swill input {
+  height: 55px;
+}
+.tab_gardien,
+.tab_conq {
+  width: 90%;
+  font-size: 15px;
+}
+.grey {
+  background-color: rgb(187, 183, 183);
+}
+.brown {
+  background-color: brown;
+}
+.green {
+  background-color: rgb(171, 243, 168);
+}
+.perle,
+.croq {
+  width: 40px;
+  height: 40px;
+}
+.min {
+  width: 20px;
+  height: 20px;
+}
+.fonth {
+  font-size: 12px;
+}
+.excel_icon {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+.fichier {
+  position: relative;
+  left: -2000px;
+}
+.listConnect {
+  margin: 20px;
+}
+
+.adminBoost {
+  display: flex;
+  justify-content: center;
+}
+.selectBoost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.checkBoost,
+.checkBoostPlayer,
+.checkboxP {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+}
+input[name='nbVote'] {
+  height: 30px;
+  width: 30px;
+}
+input[name='pseudo'] {
+  height: 30px;
+  width: 200px;
+  margin: 20px;
+}
+.boosts,
+.divBoostsP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  margin: 20px auto;
+  border: 5px solid rgb(222, 215, 0);
+}
+.cloture {
+  border: 5px solid rgb(222, 215, 0);
+  width: 40%;
+  margin: 0 auto;
+}
+.btn_boots {
+  padding: 15px;
+}
+.imgBoost,
+.imgBoostTeam,
+.imgBoostTeamBefore {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 180px;
+  border: 2px solid brown;
+  /*
+  background: rgb(58, 73, 180);
+  background: linear-gradient(
+    148deg,
+    rgba(58, 73, 180, 1) 25%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(252, 69, 69, 1) 100%
+  );
+  */
+  background-image: url(../pictures/noel.jpg);
+  background-repeat: no-repeat;
+  margin: 10px;
+}
+.imgBoostTeam {
+  height: 125px;
+  width: 100px;
+}
+.cardBoost {
+  padding: 2px;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+.boostTeam {
+  display: flex;
+  justify-content: space-evenly;
+  border: 5px solid rgb(222, 215, 0);
+  margin-bottom: 70px;
+}
+.statBoost {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+.adminVoteSuppr {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+fieldset {
+  width: 65%;
+  color: white;
+  margin: 0 auto;
+}
+.votant {
+  margin: 40px auto;
+  width: 62%;
+  border: 5px solid rgb(222, 215, 0);
+  padding: 10px;
+}
+.img_connect {
+  margin-left: 420px;
+}
+/*/////////////////////*/
+.container_addPlayer {
+  position: absolute;
+  top: 55px;
+  left: 132px;
+  width: 60%;
+  height: 200px;
+  background-color: rgb(135, 173, 190);
+  border: 5px solid blue;
+  border-radius: 10px;
+  z-index: 1;
+}
+.addNewPlayer {
+  display: flex;
+}
+.boostTeamBefore {
+  display: flex;
+  justify-content: space-evenly;
+}
+.imgBoostTeamBefore {
+  width: 125px;
+  height: 170px;
+}
+/*////////////////////////*/
+.configCombat label {
+  color: white;
+}
+.configCombat input {
+  height: 30px;
+}
+.nbJ,
+.nbC {
+  width: 50px;
+}
+.pageCombats {
+  border: 5px solid rgb(222, 215, 0);
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+input[name='submitConf'] {
+  height: 55px;
+  margin: 20px;
+}
+input[name='submitConf']:focus {
+  opacity: 0.6;
+}
+.inputCrane,
+.adversaire {
+  height: 30px;
+}
+.adversaire {
+  width: 500px;
+}
+.tab_dons {
+  width: 90%;
+}
+.tab_dons input {
+  width: 50px;
+}
+.tab_dons th {
+  background-color: rgb(222, 215, 0);
+  height: 50px;
+}
+/*************Page Player***********************/
+
+.ins_players {
+  display: flex;
+  position: relative;
+  background-color: rgb(86, 109, 173);
+  width: 100%;
+  height: 100px;
+  border: solid 5px rgb(135, 173, 190);
+}
+.ins_joueur,
+.ins_crane,
+.ins_base,
+.perkListB,
+.perkListT,
+.perkListG,
+.perkListV,
+.perkListP,
+.perkListI,
+.perkListF,
+.ins_tresor,
+.ins_guerre,
+.ins_vitesse,
+.ins_perle,
+.ins_insta,
+.ins_fonte {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  font-size: 15px;
+  width: 48%;
+  padding: 5px;
+}
+.perkListB ul,
+.perkListT ul,
+.perkListG ul,
+.perkListV ul,
+.perkListP ul,
+.perkListI ul,
+.perkListF ul {
+  list-style: none;
+}
+.ins_base,
+.ins_tresor,
+.ins_guerre,
+.ins_insta,
+.ins_perle,
+.ins_vitesse,
+.ins_fonte {
+  display: flex;
+  justify-content: center;
+}
+.ins_joueur {
+  font-size: 30px;
+}
+.ins_base {
+  border: solid blue;
+  background-color: rgb(78, 78, 233);
+}
+
+.ins_tresor {
+  border: solid green;
+  background-color: rgb(76, 126, 76);
+}
+
+.ins_guerre {
+  border: solid red;
+  background-color: rgb(247, 106, 106);
+}
+.ins_crane {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  justify-content: center;
+}
+.ins_vitesse {
+  border: solid grey;
+  background-color: rgb(182, 178, 178);
+}
+.ins_perle {
+  border: solid purple;
+  background-color: rgb(201, 149, 201);
+}
+.ins_insta {
+  border: solid orange;
+  background-color: rgb(228, 199, 145);
+}
+.ins_fonte {
+  border: solid brown;
+  background-color: rgb(165, 96, 96);
+}
+.ins_modif_player {
+  position: absolute;
+  z-index: 1;
+  top: 105px;
+  left: 23px;
+  width: 98%;
+  height: 600px;
+  background-color: rgb(135, 173, 190);
+  outline: solid 5px rgb(29, 16, 100);
+  border-radius: 15px;
+}
+.img_ins {
+  height: 70px;
+}
+.img_base,
+.img_tresor,
+.img_guerre,
+.img_vitesse,
+.img_perle,
+.img_insta,
+.img_fonte {
+  position: relative;
+  margin: 13px 5px 5px 10px;
+}
+.ins_name {
+  display: inline;
+  text-align: left;
+  margin: 0;
+}
+.ins_infos_player {
+  display: flex;
+  margin-top: 20px;
+}
+.regles {
+  font-size: 20px;
+  resize: none;
+  padding: 5px;
+  width: 700px;
+  height: 150px;
+  margin: 20px;
+}
+.nbCarRegle {
+  color: white;
+  font-size: 20px;
+}
+.nbCarRegle > span {
+  font-size: 30px;
+}
+.titleRegle {
+  color: rgb(222, 215, 0);
+  font-size: 25px;
+  margin-top: 30px;
+}
+.commentRegles {
+  font-size: 25px;
+  width: 55%;
+  height: 120px;
+  background-color: #fff;
+  border: 5px solid rgb(222, 215, 0);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+}
+.commentRegles > p {
+  text-align: justify;
+}
+.supprRegle,
+.modifyRegle {
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: rgb(49, 49, 49);
+  background-image: url('../pictures/unvalid.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 25px;
+}
+.modifyRegle {
+  background-image: url('../pictures/edit.png');
+}
+.supprRegle:focus,
+.modifyRegle:focus {
+  opacity: 0.6;
+}
+.adminDons {
+  margin: 50px;
+}
+.toolRegle {
+  width: 17%;
+  margin: 10px auto;
+  padding: 3px;
+  border: 2px solid red;
+}
+.finVote {
+  font-size: 30px;
+  color: orange;
+}
+.myButton,
+.validModif,
+.annulerModif,
+#modif_player,
+#add_new_player,
+.annulerModif,
+.suppr_player,
+.validProfil,
+.sub_add_bannis,
+.formConnexion,
+input[name='connexion'] {
+  list-style: none;
+  text-align: center;
+  width: 215px;
+  height: 45px;
+  letter-spacing: 3px;
+  box-shadow: inset -1px -1px 3px 0px #bbc28a;
+  background: linear-gradient(to bottom, #ebd992 5%, #7a2a20 100%);
+  background-color: #ebd992;
+  border-radius: 5px;
+  border: 1px solid #c29c7c;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  padding: 5px 23px;
+  text-align: center;
+  text-decoration: none;
+}
+.formConnexion {
+  width: 500px;
+  height: 470px;
+  margin: 0 auto;
+  padding-top: 55px;
+  border-radius: 20px;
+  /*
+  background-image: url('../pictures/bouclier.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  */
+}
+.myButton:hover,
+.validModif:hover,
+.annulerModif:hover,
+#modif_player:hover,
+#add_new_player:hover,
+.annulerModif:hover,
+.suppr_player:hover,
+.validProfil:hover,
+.sub_add_bannis:hover,
+input[name='connexion']:hover {
+  background: linear-gradient(to bottom, #7a2a20 5%, #ebd992 100%);
+  background-color: #7a2a20;
+}
+.myButton:active,
+.validModif:active,
+.annulerModif:active,
+#modif_player:active,
+#add_new_player:active,
+.annulerModif:active,
+.suppr_player:active,
+.validProfil:active,
+.sub_add_bannis:active,
+input[name='connexion']:active {
+  position: relative;
+  top: 1px;
+}
+.validModif,
+.annulerModif,
+#modif_player,
+#add_new_player,
+.annulerModif,
+.suppr_player,
+.validProfil,
+.sub_add_bannis {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px auto;
+  background: linear-gradient(to bottom, #ebd992 5%, #922d20 100%);
+}
+.menu_sous {
+  position: relative;
+}
+.ss_menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0px;
+}
+.menu_sous:hover .ss_menu {
+  display: block;
+}
+.navbar {
+  background-color: rgb(6, 7, 8);
+}
+.navbar > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  line-height: 36px;
+}
+.navbar > ul > li {
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.insignesG {
+  display: flex;
+  justify-content: center;
+}
+.insG {
+  border: 4px solid red;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+.dim20 {
+  width: 50px;
+}
+.dim30 {
+  width: 30px;
+}
+.dim40 {
+  width: 70px;
+}
+.batiment_t,
+.batiment_s,
+.batiment_p,
+.p_ninja,
+.p_guerre {
+  width: 30px;
+}
+.don_t,
+.don_s,
+.don_p,
+.conq_c,
+.conq_p {
+  width: 50px;
+}
+.container_file {
+  flex-direction: column;
+}
+.container_excel {
+  display: flex;
+  border: 5px solid white;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+.eachFile {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.img_ex {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#form_excel {
+  padding: 20px;
+}
+.show_img {
+  border: 5px solid white;
+  margin: auto;
+  padding: 5px;
+  width: 80%;
+}
+input[name='potion'] {
+  width: 20px;
+  height: 20px;
+}
